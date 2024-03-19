@@ -1,14 +1,17 @@
 import React from "react";
 import "./App.css";
 import MainPage from "./Page/MainPage";
-import logo from "./logo.svg";
-import logo_mukat from "./Img/logo_mukat.svg";
+import SpotlistPage from "./Page/SpotlistPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <MainPage />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/spotlist" element={<SpotlistPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
