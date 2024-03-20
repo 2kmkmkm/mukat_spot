@@ -9,12 +9,11 @@ import { Link } from "react-router-dom";
 
 const Logo = styled.a`
   padding: 10px;
-  margin-left: 0px;
+  margin-right: auto;
 `;
 
 const Header = styled.div`
   width: 100%;
-  position: relative;
   display: flex;
   height: 40px;
   background-color: none;
@@ -25,7 +24,8 @@ const Header = styled.div`
 
 const Point = styled.a`
   padding-top: 3px;
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: 10px;
 `;
 
 const Wrapper = styled.div`
@@ -39,8 +39,9 @@ const Univ = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  width: 340px;
+  margin-top: 20px;
+  width: calc(100%-20px);
+  margin: 10px;
   height: 180px;
   border: solid #fff3ef;
   border-radius: 2rem;
@@ -136,7 +137,7 @@ const MainPage = () => {
 
   return (
     <>
-      <div>
+      <div style={{ flex: "1" }}>
         <Header>
           <Logo to="..">
             <img src={logo_mukat} alt="logo" />
@@ -153,9 +154,7 @@ const MainPage = () => {
             <UnivName>구름대학교</UnivName>
           </Univ>
         </Wrapper>
-        <Wrapper>
-          <Category />
-        </Wrapper>
+        <Category />
       </div>
     </>
   );

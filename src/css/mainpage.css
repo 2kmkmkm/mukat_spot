@@ -1,7 +1,7 @@
 @import url("../font/font.css");
 
 .mainsearchbar {
-    width: calc(100%-20px);
+    width: 100%;
     border-radius: 1.25rem;
     border-style: none;
     height: 25px;
@@ -18,19 +18,18 @@ input::-webkit-input-placeholder {
 }
 
 .category {
-    margin: 15px;
-    width: 340px;
-    height: 470px;
+    width: calc(100% - 30px);
+    margin: 20px 15px;
+    height: 620px; 
     text-align: center;
-    font-size: 10px;
     align-items: center;
     justify-content: center;
-    table-layout: fixed;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 tr,td {
-    border: 1px solid black;
+    border:solid black;
     text-align: center;
     justify-content: center;
     align-items: center;
