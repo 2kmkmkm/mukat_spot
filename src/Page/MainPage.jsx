@@ -77,18 +77,11 @@ const CategoryImage = styled.div`
   width: 70px;
   height: 70px;
   margin: auto;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border-radius: 1rem;
   align-items: center;
   justify-content: center;
   display: flex;
-`;
-
-const CategoryButton = styled.a`
-  width: 100%;
-  height: 100%;
-  background: none;
-  border: none;
 `;
 
 const Category = () => {
@@ -116,7 +109,12 @@ const Category = () => {
             <td>
               <Link className="categorybutton" to="/spotlist">
                 <CategoryImage>
-                  <img width="40px" src={cafe_dessert} alt="cafe/dessert" />
+                  <img
+                    width="40px"
+                    style={{ marginLeft: "2px" }}
+                    src={cafe_dessert}
+                    alt="cafe/dessert"
+                  />
                 </CategoryImage>
               </Link>
               <div>카페/디저트</div>

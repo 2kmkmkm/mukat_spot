@@ -19,7 +19,7 @@ input::-webkit-input-placeholder {
  
 .category {
     width: calc(100% - 30px);
-    margin: 20px 15px;
+    margin: 0px 15px;
     height: 380px;
     text-align: center;
     align-items: center;
@@ -28,11 +28,11 @@ input::-webkit-input-placeholder {
     table-layout: fixed;
 }
 
-
 td {
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 13px;
     font-family: "Pretendard-Medium";
     table-layout: fixed;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import back from "../Img/back.svg";
 import point from "../Img/point.svg";
-import location from "../Img/location.svg";
+import location from "../Img/location_white.svg";
 import catfoot from "../Img/catfoot.svg";
 import { Link } from "react-router-dom";
 import "../css/spotlistpage.css";
@@ -44,6 +44,7 @@ const Wrapper = styled.div`
 `;
 
 const SpotImage = styled.div`
+  width: 100%;
   border-radius: 1.5rem;
   border: 1px solid black;
   height: 110px;
@@ -53,7 +54,6 @@ const SpotImage = styled.div`
 const Location = () => {
   return (
     <>
-      ``
       <div className="location">
         <img src={location} width="10px" alt="location"></img>
         <div style={{ padding: "3px" }}>800m</div>
@@ -82,6 +82,27 @@ const SpotInfo = () => {
   );
 };
 
+/* const SpotlistItem = ({ spotId, spotName, spotAddress, spotDistance }) => {
+  return (
+    <Link to={`/spotdetail/${spotId}`} className="spotlistitem-link">
+      <div className="spotlistitem">
+        <SpotImage>
+          <img
+            src={spotimage}
+            alt="spotimage"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </SpotImage>
+        <SpotInfo
+          spotName={spotName}
+          spotAddress={spotAddress}
+          spotDistance={spotDistance}
+        />
+      </div>
+    </Link>
+  );
+}; */
+
 const Spotlist = () => {
   return (
     <>
@@ -94,6 +115,7 @@ const Spotlist = () => {
     </>
   );
 };
+
 const SpotlistPage = () => {
   const SearchBar = () => {
     const [search, setSearch] = useState("");
@@ -129,6 +151,7 @@ const SpotlistPage = () => {
       </div>
     );
   };
+
   return (
     <>
       <Header>
@@ -144,7 +167,9 @@ const SpotlistPage = () => {
       </Header>
       <SearchBar />
       <Wrapper>
-        <Spotlist />
+        <Link className="link" to="/spotdetail">
+          <Spotlist />
+        </Link>
       </Wrapper>
     </>
   );
