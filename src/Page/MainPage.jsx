@@ -7,6 +7,14 @@ import mukat from "../Img/mukat.svg";
 import logo_mukatlist from "../Img/logo_mukatlist.svg";
 import { Link } from "react-router-dom";
 import all from "../Img/전체.svg";
+import bar from "../Img/술집.svg";
+import cafe_dessert from "../Img/카페_디저트.svg";
+import korean from "../Img/한식.svg";
+import chinese from "../Img/중식.svg";
+import western from "../Img/양식.svg";
+import japanese from "../Img/일식.svg";
+import bunsik from "../Img/분식.svg";
+import etc from "../Img/기타.svg";
 
 const Logo = styled.a`
   padding: 10px;
@@ -30,6 +38,7 @@ const Point = styled.a`
 `;
 
 const Wrapper = styled.div`
+  margin-top: 20px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -41,10 +50,10 @@ const Univ = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  width: calc(100%-20px);
-  margin: 10px;
+  width: calc(100%-30px);
+  margin: 15px;
   height: 180px;
-  border: solid #fff3ef;
+  border: solid #fff3ef 5px;
   border-radius: 2rem;
 `;
 
@@ -85,29 +94,85 @@ const CategoryButton = styled.a`
 const Category = () => {
   return (
     <>
-      <table className="category" style={{ padding: "0" }}>
+      <table className="category">
         <tbody>
           <tr>
-            <td>
+            <td height="20px">
               <Link className="categorybutton" to="/spotlist">
                 <CategoryImage>
                   <img width="45px" src={all} alt="all" />
                 </CategoryImage>
-                <div style={{ marginTop: "10px" }}>전체</div>
+                <div>전체</div>
               </Link>
             </td>
-            <td>술집</td>
-            <td>카페/디저트</td>
+            <td>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="35px" src={bar} alt="bar" />
+                </CategoryImage>
+                <div>술집</div>
+              </Link>
+            </td>
+            <td>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="40px" src={cafe_dessert} alt="cafe/dessert" />
+                </CategoryImage>
+              </Link>
+              <div>카페/디저트</div>
+            </td>
           </tr>
           <tr>
-            <td>한식</td>
-            <td>중식</td>
-            <td>양식</td>
+            <td height="20px">
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="40px" src={korean} alt="korean" />
+                </CategoryImage>
+              </Link>
+              <div>한식</div>
+            </td>
+            <td>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="100px" src={chinese} alt="chinese" />
+                </CategoryImage>
+              </Link>
+              <div>중식</div>
+            </td>
+            <td>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="40px" src={western} alt="western" />
+                </CategoryImage>
+              </Link>
+              <div>양식</div>
+            </td>
           </tr>
           <tr>
-            <td>일식</td>
-            <td>분식</td>
-            <td>기타</td>
+            <td height="20px">
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="40px" src={japanese} alt="japanese" />
+                </CategoryImage>
+              </Link>
+              <div>일식</div>
+            </td>
+            <td>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="20px" src={bunsik} alt="bunsik" />
+                </CategoryImage>
+              </Link>
+              <div>분식</div>
+            </td>
+            <td>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="45px" src={etc} alt="etc" />
+                </CategoryImage>
+              </Link>
+              <div>기타</div>
+            </td>
           </tr>
         </tbody>
       </table>
