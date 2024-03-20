@@ -16,7 +16,7 @@
 input::-webkit-input-placeholder {
     color: #d1d1d1;
 }
-
+ 
 .category {
     width: calc(100% - 30px);
     margin: 20px 15px;
@@ -33,4 +33,10 @@ tr,td {
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-family: "Pretendard-Medium";
+}
+
+.categorybutton {
+    text-decoration: none;
+    color: black;
 }

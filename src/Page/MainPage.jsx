@@ -6,6 +6,7 @@ import point from "../Img/point.svg";
 import mukat from "../Img/mukat.svg";
 import logo_mukatlist from "../Img/logo_mukatlist.svg";
 import { Link } from "react-router-dom";
+import all from "../Img/전체.svg";
 
 const Logo = styled.a`
   padding: 10px;
@@ -62,23 +63,38 @@ const UnivName = styled.div`
   justify-content: center;
 `;
 
-const CateogryImage = styled.div`
-  border: solid #fff3ef;
-  width: 40px;
-  height: 40px;
+const CategoryImage = styled.div`
+  border: solid #fff3ef 5px;
+  width: 70px;
+  height: 70px;
   margin: auto;
   margin-bottom: 5px;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+`;
+
+const CategoryButton = styled.a`
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
 `;
 
 const Category = () => {
   return (
     <>
-      <table className="category">
+      <table className="category" style={{ padding: "0" }}>
         <tbody>
           <tr>
             <td>
-              <Link to="/spotlist">전체</Link>
+              <Link className="categorybutton" to="/spotlist">
+                <CategoryImage>
+                  <img width="45px" src={all} alt="all" />
+                </CategoryImage>
+                <div style={{ marginTop: "10px" }}>전체</div>
+              </Link>
             </td>
             <td>술집</td>
             <td>카페/디저트</td>

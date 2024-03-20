@@ -4,6 +4,7 @@ import back from "../Img/back.svg";
 import point from "../Img/point.svg";
 import location from "../Img/location.svg";
 import catfoot from "../Img/catfoot.svg";
+import { Link } from "react-router-dom";
 import "../css/spotlistpage.css";
 import "../font/font.css";
 
@@ -132,7 +133,9 @@ const SpotlistPage = () => {
     <>
       <Header>
         <Back>
-          <img src={back} alt="back" />
+          <Link to="/">
+            <img src={back} alt="back" />
+          </Link>
         </Back>
         <CategoryName>전체</CategoryName>
         <Point>
